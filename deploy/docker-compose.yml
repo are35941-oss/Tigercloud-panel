@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  panel:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: obsidian-panel
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+      - DATA_DIR=/var/lib/minecraft-panel/servers
+      - JWT_SECRET=change_this_to_a_secure_random_string_in_production
+      - ADMIN_USER=admin
+      - ADMIN_PASS=ObsidianAdmin2026!
+      - ENABLE_DOCKER=true
+    volumes:
+      # Mount host Docker socket so the panel can manage Minecraft container instances
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Persistent servers volume directory
+      - /var/lib/minecraft-panel/servers:/var/lib/minecraft-panel/servers
+      # Panel database & settings
+      - panel-data:/opt/minecraft-panel/data
+
+volumes:
+  panel-data:

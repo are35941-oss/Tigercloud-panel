@@ -1,0 +1,27 @@
+[Unit]
+Description=ObsidianNode - Modern Minecraft Server Hosting Panel
+Documentation=https://github.com/your-org/obsidian-node
+After=network.target docker.service
+Requires=docker.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/minecraft-panel
+Environment=NODE_ENV=production
+EnvironmentFile=/opt/minecraft-panel/.env
+ExecStart=/usr/bin/npm run start
+Restart=always
+RestartSec=5
+KillMode=process
+TimeoutSec=30
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=minecraft-panel
+
+# File limits for handling many concurrent server files and sockets
+LimitNOFILE=65535
+LimitNPROC=4096
+
+[Install]
+WantedBy=multi-user.target

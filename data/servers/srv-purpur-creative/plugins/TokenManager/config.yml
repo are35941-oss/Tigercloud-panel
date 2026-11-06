@@ -1,0 +1,12 @@
+# TokenManager Configuration
+prefix: "&e&lTOKENS &8» &7"
+currency-name: "Tokens"
+currency-symbol: "⛃"
+starting-balance: 100
+mob-drop-chance: 35
+mob-token-amount: 2
+mining-token-chance: 20
+mining-token-amount: 1
+database:
+  type: SQLITE
+  file: tokens.db

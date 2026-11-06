@@ -1,0 +1,14 @@
+# TokenEnchants Pre-Configured Packs
+enchants:
+  explosive:
+    cost: 500
+    max-level: 5
+    description: "Detonates mined blocks in a 3x3 radius"
+  jackhammer:
+    cost: 1200
+    max-level: 3
+    description: "Instantly cleaves whole ore layers"
+  laser:
+    cost: 2500
+    max-level: 2
+    description: "Fires a mining laser up to 10 blocks forward"

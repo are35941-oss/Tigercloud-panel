@@ -1,0 +1,581 @@
+{
+  "adminUser": {
+    "username": "tiger",
+    "salt": "f140fee6f9b24a5888a549e4dc39f640",
+    "passwordHash": "c876c0e18da0f3200fdc258ea993334a8c4d0fa8ce87a86ab2b30c71947c31aab477cfa3d039abc9687808d980aa37b1453cb0d3573f5ff295aca4175929b597"
+  },
+  "users": [
+    {
+      "id": "user-tiger",
+      "username": "tiger",
+      "email": "tiger@obsidian-node.internal",
+      "role": "SUPER_ADMIN",
+      "serverPermissions": [
+        "*"
+      ],
+      "createdAt": "2026-11-06T06:00:00.000Z"
+    },
+    {
+      "id": "user-admin",
+      "username": "admin",
+      "email": "admin@obsidian-node.internal",
+      "role": "SUPER_ADMIN",
+      "serverPermissions": [
+        "*"
+      ],
+      "createdAt": "2026-11-06T05:40:38.291Z"
+    },
+    {
+      "id": "user-devops",
+      "username": "alex_ops",
+      "email": "alex@example.com",
+      "role": "SUB_USER",
+      "serverPermissions": [
+        "srv-paper-survival"
+      ],
+      "createdAt": "2026-11-06T05:40:38.291Z"
+    },
+    {
+      "id": "user-auditor",
+      "username": "auditor_read",
+      "email": "auditor@example.com",
+      "role": "VIEWER",
+      "serverPermissions": [
+        "*"
+      ],
+      "createdAt": "2026-11-06T05:40:38.291Z"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-us-east",
+      "name": "Primary Node (US-East)",
+      "fqdn": "127.0.0.1",
+      "port": 8080,
+      "token": "daemon_token_primary_cluster_2026",
+      "isLocal": true,
+      "status": "ONLINE",
+      "location": "Ashburn, VA",
+      "totalRamMb": 32768,
+      "allocatedRamMb": 6144,
+      "totalCpuCores": 8,
+      "allocatedCpuPercent": 120,
+      "totalDiskGb": 500,
+      "allocatedDiskGb": 30,
+      "pingMs": 2,
+      "containersCount": 2,
+      "dockerVersion": "Docker Engine 26.1.1 (Ubuntu 24.04)",
+      "osInfo": "Linux 6.8.0-31-generic x86_64",
+      "lastHeartbeat": "2026-11-06T05:40:50.191Z"
+    },
+    {
+      "id": "node-eu-central",
+      "name": "Frankfurt Node (EU-Central)",
+      "fqdn": "eu-node1.obsidian-cloud.internal",
+      "port": 8080,
+      "token": "daemon_token_frankfurt_wings_secret",
+      "isLocal": false,
+      "status": "ONLINE",
+      "location": "Frankfurt, DE",
+      "totalRamMb": 65536,
+      "allocatedRamMb": 16384,
+      "totalCpuCores": 16,
+      "allocatedCpuPercent": 250,
+      "totalDiskGb": 1000,
+      "allocatedDiskGb": 95,
+      "pingMs": 38,
+      "containersCount": 4,
+      "dockerVersion": "Docker Engine 26.1.0 (Debian 12)",
+      "osInfo": "Linux 6.1.0-21-amd64 x86_64",
+      "lastHeartbeat": "2026-11-06T05:40:38.219Z"
+    },
+    {
+      "id": "node-ap-east",
+      "name": "Tokyo Node (AP-Northeast)",
+      "fqdn": "ap-node1.obsidian-cloud.internal",
+      "port": 8080,
+      "token": "daemon_token_tokyo_wings_secret",
+      "isLocal": false,
+      "status": "ONLINE",
+      "location": "Tokyo, JP",
+      "totalRamMb": 32768,
+      "allocatedRamMb": 8192,
+      "totalCpuCores": 8,
+      "allocatedCpuPercent": 150,
+      "totalDiskGb": 500,
+      "allocatedDiskGb": 40,
+      "pingMs": 72,
+      "containersCount": 2,
+      "dockerVersion": "Docker Engine 26.0.2 (Ubuntu 22.04)",
+      "osInfo": "Linux 5.15.0-105-generic x86_64",
+      "lastHeartbeat": "2026-11-06T05:40:38.219Z"
+    },
+    {
+      "id": "node-mw4ld62t",
+      "name": "Singapore Edge 1",
+      "fqdn": "sg1.obsidian-cloud.internal",
+      "port": 8080,
+      "token": "ptlc_node_sec_7acfe451b0f54d692a5829d61e8599a4c60e87c2fc5af57fd5",
+      "isLocal": false,
+      "status": "ONLINE",
+      "location": "Singapore, SG",
+      "totalRamMb": 65536,
+      "allocatedRamMb": 0,
+      "totalCpuCores": 16,
+      "allocatedCpuPercent": 0,
+      "totalDiskGb": 1000,
+      "allocatedDiskGb": 0,
+      "pingMs": 21,
+      "containersCount": 0,
+      "dockerVersion": "Docker Engine 26.1.1 (Ubuntu 24.04)",
+      "osInfo": "Linux 6.8.0-31-generic x86_64",
+      "lastHeartbeat": "2026-11-06T06:26:45.369Z"
+    }
+  ],
+  "servers": [
+    {
+      "id": "srv-paper-survival",
+      "name": "Lobby & Survival Realm",
+      "description": "Production PaperMC 1.21.1 High-Performance Server with optimizations",
+      "nodeId": "node-us-east",
+      "type": "PAPER",
+      "version": "1.21.1",
+      "memoryMb": 4096,
+      "cpuLimitPercent": 150,
+      "diskLimitGb": 20,
+      "port": 25565,
+      "rconPort": 25575,
+      "queryPort": 25565,
+      "status": "RUNNING",
+      "dockerContainerId": "mc-srv-paper-survival",
+      "volumePath": "/app/applet/data/servers/srv-paper-survival",
+      "motd": "§a§lObsidianNode §7» §fTokenSMP Realm\\n§e⚔ §fOverdrive Season 4 §7| §b0.0.0.0:25565",
+      "maxPlayers": 50,
+      "jvmFlags": "-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200",
+      "autoRestart": true,
+      "installedPlugins": [
+        "essentialsx",
+        "luckperms",
+        "vault"
+      ],
+      "createdAt": "2026-11-06T05:25:44.667Z",
+      "updatedAt": "2026-11-06T06:00:59.636Z"
+    },
+    {
+      "id": "srv-purpur-creative",
+      "name": "Community Creative",
+      "description": "Purpur 1.20.4 Sandbox World with FastAsyncWorldEdit",
+      "nodeId": "node-eu-central",
+      "type": "PURPUR",
+      "version": "1.20.4",
+      "memoryMb": 2048,
+      "cpuLimitPercent": 100,
+      "diskLimitGb": 10,
+      "port": 25566,
+      "rconPort": 25576,
+      "status": "STOPPED",
+      "dockerContainerId": "mc-srv-purpur-creative",
+      "volumePath": "/app/applet/data/servers/srv-purpur-creative",
+      "motd": "§e§lTOKEN§6§lSMP §7» §fSeason IV: Overdrive\\n§a✔ §fCustom Token Enchants §7| §e/tokenshop §7| §b0.0.0.0:25566",
+      "maxPlayers": 25,
+      "autoRestart": false,
+      "installedPlugins": [
+        "worldedit",
+        "fastasyncworldedit",
+        "tokenmanager",
+        "tokenenchants",
+        "vault",
+        "essentialsx",
+        "luckperms"
+      ],
+      "createdAt": "2026-11-06T05:25:44.667Z",
+      "updatedAt": "2026-11-06T06:01:26.917Z"
+    },
+    {
+      "id": "srv-paper-mw4j7u4v",
+      "name": "Y",
+      "description": "PAPER 1.21.1 Minecraft Server",
+      "nodeId": "node-us-east",
+      "type": "PAPER",
+      "version": "1.21.1",
+      "memoryMb": 8192,
+      "cpuLimitPercent": 100,
+      "diskLimitGb": 10,
+      "port": 25567,
+      "rconPort": 25577,
+      "status": "RUNNING",
+      "volumePath": "/app/applet/data/servers/srv-paper-mw4j7u4v",
+      "motd": "§a§lObsidianNode §7» §fHigh-Performance Minecraft Server",
+      "maxPlayers": 25,
+      "jvmFlags": "-XX:+UseG1GC -XX:+ParallelRefProcEnabled",
+      "autoRestart": false,
+      "installedPlugins": [],
+      "createdAt": "2026-11-06T05:26:27.919Z",
+      "updatedAt": "2026-11-06T05:26:37.906Z"
+    }
+  ],
+  "allocations": [
+    {
+      "id": "alloc-1",
+      "port": 25565,
+      "protocol": "BOTH",
+      "assignedServerId": "srv-paper-survival",
+      "isPrimary": true,
+      "notes": "Main Game Port"
+    },
+    {
+      "id": "alloc-2",
+      "port": 25575,
+      "protocol": "TCP",
+      "assignedServerId": "srv-paper-survival",
+      "isPrimary": false,
+      "notes": "RCON Remote Console"
+    },
+    {
+      "id": "alloc-3",
+      "port": 25566,
+      "protocol": "BOTH",
+      "assignedServerId": "srv-purpur-creative",
+      "isPrimary": true,
+      "notes": "Creative Game Port"
+    },
+    {
+      "id": "alloc-4",
+      "port": 25576,
+      "protocol": "TCP",
+      "assignedServerId": "srv-purpur-creative",
+      "isPrimary": false,
+      "notes": "Creative RCON"
+    },
+    {
+      "id": "alloc-5",
+      "port": 25567,
+      "protocol": "BOTH",
+      "isPrimary": true,
+      "notes": "Spare Allocation",
+      "assignedServerId": "srv-paper-mw4j7u4v"
+    },
+    {
+      "id": "alloc-6",
+      "port": 25568,
+      "protocol": "BOTH",
+      "isPrimary": false,
+      "notes": "Spare Allocation"
+    },
+    {
+      "id": "alloc-7",
+      "port": 8123,
+      "protocol": "TCP",
+      "isPrimary": false,
+      "notes": "Dynmap / Web Map"
+    }
+  ],
+  "pluginsCatalog": [
+    {
+      "id": "essentialsx",
+      "name": "EssentialsX",
+      "description": "The essential suite providing teleportation, homes, kits, warp points, and economy support.",
+      "version": "2.20.1",
+      "author": "EssentialsX Team",
+      "downloads": 8420000,
+      "rating": 4.9,
+      "category": "ESSENTIALS",
+      "source": "SpigotMC",
+      "fileName": "EssentialsX-2.20.1.jar",
+      "fileSizeKb": 3420
+    },
+    {
+      "id": "luckperms",
+      "name": "LuckPerms",
+      "description": "Industry-standard permissions management plugin with rich web editor and SQL synchronization.",
+      "version": "5.4.102",
+      "author": "Luck",
+      "downloads": 7190000,
+      "rating": 5,
+      "category": "PERMISSIONS",
+      "source": "Modrinth",
+      "fileName": "LuckPerms-Bukkit-5.4.102.jar",
+      "fileSizeKb": 2180
+    },
+    {
+      "id": "vault",
+      "name": "Vault",
+      "description": "Universal permission, chat, and economy bridge abstraction layer for Bukkit/Paper plugins.",
+      "version": "1.7.3",
+      "author": "MilkBowl",
+      "downloads": 9800000,
+      "rating": 4.8,
+      "category": "ESSENTIALS",
+      "source": "SpigotMC",
+      "fileName": "Vault-1.7.3.jar",
+      "fileSizeKb": 395
+    },
+    {
+      "id": "worldedit",
+      "name": "WorldEdit",
+      "description": "In-game Minecraft map editor allowing rapid block placement, shapes, smoothing, and schematics.",
+      "version": "7.3.0",
+      "author": "EngineHub",
+      "downloads": 6500000,
+      "rating": 4.9,
+      "category": "WORLDS",
+      "source": "Modrinth",
+      "fileName": "worldedit-bukkit-7.3.0.jar",
+      "fileSizeKb": 5120
+    },
+    {
+      "id": "fastasyncworldedit",
+      "name": "FastAsyncWorldEdit (FAWE)",
+      "description": "Blazingly fast asynchronous WorldEdit fork designed to eliminate server lag on massive edits.",
+      "version": "2.8.4",
+      "author": "IntellectualSites",
+      "downloads": 2400000,
+      "rating": 4.7,
+      "category": "PERFORMANCE",
+      "source": "Hangar",
+      "fileName": "FastAsyncWorldEdit-Bukkit-2.8.4.jar",
+      "fileSizeKb": 6890
+    },
+    {
+      "id": "viaversion",
+      "name": "ViaVersion",
+      "description": "Allows newer Minecraft client versions to connect to older server versions seamlessly.",
+      "version": "4.9.3",
+      "author": "ViaVersion Team",
+      "downloads": 5800000,
+      "rating": 4.9,
+      "category": "PERFORMANCE",
+      "source": "Hangar",
+      "fileName": "ViaVersion-4.9.3.jar",
+      "fileSizeKb": 1840
+    },
+    {
+      "id": "geysermc",
+      "name": "GeyserMC & Floodgate",
+      "description": "Cross-platform bridge allowing Minecraft Bedrock Edition (iOS/Android/Xbox) players to join Java servers.",
+      "version": "2.2.2",
+      "author": "GeyserMC",
+      "downloads": 3890000,
+      "rating": 4.9,
+      "category": "ESSENTIALS",
+      "source": "Modrinth",
+      "fileName": "Geyser-Spigot-2.2.2.jar",
+      "fileSizeKb": 14200
+    },
+    {
+      "id": "chunky",
+      "name": "Chunky",
+      "description": "Pre-generates world chunks asynchronously to permanently eliminate server tick drops during exploration.",
+      "version": "1.4.10",
+      "author": "pop4959",
+      "downloads": 1650000,
+      "rating": 4.9,
+      "category": "PERFORMANCE",
+      "source": "SpigotMC",
+      "fileName": "Chunky-1.4.10.jar",
+      "fileSizeKb": 890
+    },
+    {
+      "id": "coreprotect",
+      "name": "CoreProtect",
+      "description": "Fast, efficient data logging and anti-griefing inspection/rollback tool with SQLite/MySQL backends.",
+      "version": "22.2",
+      "author": "Intelli",
+      "downloads": 4100000,
+      "rating": 4.9,
+      "category": "PROTECTION",
+      "source": "SpigotMC",
+      "fileName": "CoreProtect-22.2.jar",
+      "fileSizeKb": 1650
+    },
+    {
+      "id": "tab",
+      "name": "TAB Reborn",
+      "description": "Highly customizable player tablist, overhead nametags, and bossbar formatting with RGB gradient support.",
+      "version": "4.1.4",
+      "author": "NEZNAMY",
+      "downloads": 2950000,
+      "rating": 4.8,
+      "category": "COSMETICS",
+      "source": "SpigotMC",
+      "fileName": "TAB-v4.1.4.jar",
+      "fileSizeKb": 1240
+    },
+    {
+      "id": "multiverse-core",
+      "name": "Multiverse-Core",
+      "description": "Multi-world management plugin supporting separate world generators, seeds, and portals.",
+      "version": "4.3.1",
+      "author": "Multiverse Team",
+      "downloads": 4900000,
+      "rating": 4.6,
+      "category": "WORLDS",
+      "source": "SpigotMC",
+      "fileName": "Multiverse-Core-4.3.1.jar",
+      "fileSizeKb": 2450
+    },
+    {
+      "id": "clearlag",
+      "name": "ClearLag",
+      "description": "Entity and ground item garbage collector with customizable tick limiter and RAM conservation sweeps.",
+      "version": "3.2.2",
+      "author": "bob7l",
+      "downloads": 3200000,
+      "rating": 4.5,
+      "category": "PERFORMANCE",
+      "source": "SpigotMC",
+      "fileName": "ClearLag-3.2.2.jar",
+      "fileSizeKb": 610
+    }
+  ],
+  "players": {
+    "srv-paper-survival": [
+      {
+        "uuid": "853c80ef-3c37-49fd-aa49-938b674adae6",
+        "name": "Steve",
+        "pingMs": 24,
+        "isOp": true,
+        "isWhitelisted": true,
+        "gamemode": "survival",
+        "health": 20,
+        "joinedAt": "2026-11-06T04:40:38.291Z",
+        "ipAddress": "192.168.1.42"
+      },
+      {
+        "uuid": "069a79f4-44e9-4726-a5be-fca90e38aaf5",
+        "name": "Alex",
+        "pingMs": 38,
+        "isOp": false,
+        "isWhitelisted": true,
+        "gamemode": "survival",
+        "health": 18,
+        "joinedAt": "2026-11-06T05:10:38.291Z",
+        "ipAddress": "10.0.4.15"
+      },
+      {
+        "uuid": "61626364-6566-6768-696a-6b6c6d6e6f70",
+        "name": "Notch_Fan",
+        "pingMs": 45,
+        "isOp": false,
+        "isWhitelisted": true,
+        "gamemode": "creative",
+        "health": 20,
+        "joinedAt": "2026-11-06T05:30:38.291Z",
+        "ipAddress": "172.16.0.8"
+      }
+    ]
+  },
+  "auditLogs": [
+    {
+      "id": "log-1",
+      "user": "admin",
+      "action": "SERVER_BOOTSTRAP",
+      "serverName": "Lobby & Survival Realm",
+      "details": "Initialized PaperMC 1.21.1 container on Primary Node",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-11-06T03:40:38.291Z"
+    },
+    {
+      "id": "log-2",
+      "user": "admin",
+      "action": "NODE_HEARTBEAT",
+      "details": "Verified mTLS connection to Frankfurt Node (EU-Central)",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-11-06T04:40:38.291Z"
+    },
+    {
+      "id": "audit-1793944859637-483",
+      "user": "admin",
+      "action": "SERVER_MOTD_UPDATE",
+      "serverId": "srv-paper-survival",
+      "serverName": "Lobby & Survival Realm",
+      "details": "Updated multiplayer 2-line MOTD",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-11-06T06:00:59.637Z"
+    },
+    {
+      "id": "audit-1793944879321-7484",
+      "user": "admin",
+      "action": "SERVER_ICON_UPDATE",
+      "serverId": "srv-paper-survival",
+      "serverName": "Lobby & Survival Realm",
+      "details": "Updated server 64x64 icon",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-11-06T06:01:19.321Z"
+    },
+    {
+      "id": "audit-1793944886917-4858",
+      "user": "admin",
+      "action": "TEMPLATE_DEPLOY",
+      "serverId": "srv-purpur-creative",
+      "serverName": "Community Creative",
+      "details": "Deployed template \"TokenSMP Economy & Custom Enchants\" in OVERLAY mode",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-11-06T06:01:26.917Z"
+    },
+    {
+      "id": "audit-1793944927927-7795",
+      "user": "admin",
+      "action": "FILE_ZIP",
+      "serverId": "srv-purpur-creative",
+      "serverName": "Community Creative",
+      "details": "Archived plugins -> plugins.zip",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-11-06T06:02:07.927Z"
+    },
+    {
+      "id": "audit-1793944939292-3973",
+      "user": "admin",
+      "action": "FILE_UNZIP",
+      "serverId": "srv-purpur-creative",
+      "serverName": "Community Creative",
+      "details": "Extracted plugins.zip into extracted_plugins",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-11-06T06:02:19.292Z"
+    },
+    {
+      "id": "audit-1793946387179-1984",
+      "user": "tiger",
+      "action": "USER_LOGIN",
+      "details": "Super Admin logged in from 127.0.0.1",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-11-06T06:26:27.179Z"
+    },
+    {
+      "id": "audit-1793946395910-3280",
+      "user": "admin",
+      "action": "NODE_CREATE",
+      "details": "Registered remote node Singapore Edge 1 (sg1.obsidian-cloud.internal:8080)",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-11-06T06:26:35.910Z"
+    },
+    {
+      "id": "audit-1793946405369-2854",
+      "user": "daemon",
+      "action": "NODE_HANDSHAKE",
+      "details": "Remote VPS Node \"Singapore Edge 1\" (sg1.obsidian-cloud.internal:8080) successfully paired and transitioned to ONLINE",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-11-06T06:26:45.369Z"
+    }
+  ],
+  "apiTokens": [
+    {
+      "id": "token-1",
+      "name": "CI/CD Automation Token",
+      "tokenPrefix": "ptlc_7f9a2b",
+      "scopes": [
+        "servers:read",
+        "servers:power",
+        "servers:files"
+      ],
+      "createdAt": "2026-11-06T05:40:38.292Z",
+      "lastUsedAt": "2026-11-06T05:40:38.292Z"
+    }
+  ],
+  "settings": {
+    "defaultMemoryMb": 2048,
+    "defaultPortStart": 25565,
+    "dockerImage": "itzg/minecraft-server:latest",
+    "vpsHostname": "mc.example.com"
+  }
+}

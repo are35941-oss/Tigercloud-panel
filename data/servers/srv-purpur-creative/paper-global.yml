@@ -1,0 +1,6 @@
+# Paper Global Configuration
+chunk-loading-advanced-player-teleport: false
+async-chunks:
+  threads: -1
+player-auto-save-rate: -1
+max-auto-save-chunks-per-tick: 24

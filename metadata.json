@@ -1,0 +1,6 @@
+{
+  "name": "ObsidianNode - Minecraft VPS Control Panel",
+  "description": "A lightweight, modern Minecraft Server Hosting Control Panel with Docker virtualization, live terminal console, file manager, dynamic port allocation, and automated one-click VPS installer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
